@@ -1,0 +1,17 @@
+﻿<Window x:Class="RandomScale.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomScale"
+        mc:Ignorable="d"
+        Title="Random Scale" Height="600" Width="800" WindowState="Maximized" d:DataContext="{d:DesignInstance Type=local:RandomScaleViewModel, IsDesignTimeCreatable=True}">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Foreground="DarkCyan" FontSize="50" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding ChosenScale}"></TextBlock>
+        <Button Grid.Row="1" Margin="20" Height="50" Width="150" FontSize="20" Click="Button_Click" IsDefault="True">Choose again</Button>
+    </Grid>
+</Window>
